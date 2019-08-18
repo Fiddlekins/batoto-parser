@@ -1,0 +1,21 @@
+{
+  "name": "batoto-parser",
+  "version": "1.0.0",
+  "description": "There's some funky data dump from batoto and this is a dirty little parser to read it",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "parse": "node --experimental-modules index.js chapter_files.json",
+    "test": "node --experimental-modules index.js sample-input.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fiddlekins/batoto-parser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fiddlekins/batoto-parser/issues"
+  },
+  "homepage": "https://github.com/Fiddlekins/batoto-parser#readme"
+}
