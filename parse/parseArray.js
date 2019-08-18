@@ -116,6 +116,11 @@ function parseArray(data) {
         const array = [];
         items.forEach(item => {
             array[item.key] = item.value;
+        });
+        array.forEach(item => {
+            if (typeof item === 'undefined') {
+                throw new Error(`Parsed array has holes in ${data}`);
+            }
         })
         return array;
     }
@@ -127,7 +132,7 @@ function parseArray(data) {
         const object = {};
         items.forEach(item => {
             object[item.key] = item.value;
-        })
+        });
         return object;
     }
     throw new Error(`Array contains items with mixed or unrecognised type keys: ${data}`);
